@@ -1,0 +1,75 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "SyntaxError",
+     "evalue": "invalid syntax. Perhaps you forgot a comma? (2182280904.py, line 9)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;36m  Cell \u001b[0;32mIn[3], line 9\u001b[0;36m\u001b[0m\n\u001b[0;31m    key_in=pyip.inputInt(f\"猜數字範圍{min},\"~\",{max}\")\u001b[0m\n\u001b[0m                         ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax. Perhaps you forgot a comma?\n"
+     ]
+    }
+   ],
+   "source": [
+    "import pyinputplus as pyip\n",
+    "import random\n",
+    "count=0\n",
+    "min=1\n",
+    "max=100\n",
+    "random_number=random.randint(min,max)\n",
+    "print(\"===========猜數字遊戲=============\")\n",
+    "while(True):\n",
+    "    key_in=pyip.inputInt(f\"猜數字範圍{min}~{max}\")\n",
+    "    count+=1\n",
+    "    print(key_in)\n",
+    "    if key_in==random_number:\n",
+    "        print(f\"Bingo!猜對了,答案是{random_number}\")\n",
+    "        print(f\"您猜了{count}次\")\n",
+    "        break\n",
+    "    elif key_in > random_number:\n",
+    "        max=key_in-1\n",
+    "        print(f\"猜錯了，再小一點\")\n",
+    "        print(f\"您猜了{count}次\")\n",
+    "    elif key_in < random_number:\n",
+    "        min=key_in+1\n",
+    "        print(f\"猜錯了，再大一點\")\n",
+    "        print(f\"您猜了{count}次\")\n",
+    "print(\"遊戲結束\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "50"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.13"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
